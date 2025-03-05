@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Billing System</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Food Billing System</h1>
+        <div class="content">
+            <div class="menu">
+
+                <div class="item" data-name="Burger" data-price="5">
+                    <span>Burger - ₹150</span>
+                    <button onclick="addToCart('Burger', 150)">Add</button>
+                </div>
+
+                <div class="item" data-name="Pizza" data-price="8">
+                    <span>Pizza - ₹200</span>
+                    <button onclick="addToCart('Pizza', 200)">Add</button>
+                </div>
+
+                <div class="item" data-name="Pasta" data-price="6">
+                    <span>Pasta - ₹180</span>
+                    <button onclick="addToCart('Pasta', 180)">Add</button>
+                </div>
+
+                <div class="item" data-name="Sandwich" data-price="4">
+                    <span>Sandwich - ₹100</span>
+                    <button onclick="addToCart('Sandwich', 100)">Add</button>
+                </div>
+
+                <div class="item" data-name="Fries" data-price="3">
+                    <span>Fries - ₹100</span>
+                    <button onclick="addToCart('Fries', 100)">Add</button>
+                </div>
+
+                <div class="item" data-name="Coke" data-price="2">
+                    <span>Coke - ₹20</span>
+                    <button onclick="addToCart('Coke', 20)">Add</button>
+                </div>
+
+                <div class="item" data-name="Coffee" data-price="5">
+                    <span>Coffee - ₹15</span>
+                    <button onclick="addToCart('Coffee', 15)">Add</button>
+                </div>
+
+                <div class="item" data-name="Ice Cream" data-price="7">
+                    <span>Ice Cream - ₹40</span>
+                    <button onclick="addToCart('Ice Cream', 40)">Add</button>
+                </div>
+
+            </div>
+            <div class="cart-container">
+                <h2>Cart</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart"></tbody>
+                </table>
+                <h3>Total: ₹<span id="total">0</span></h3>
+                <h3>GST (5%): ₹<span id="gst">0</span></h3>
+                <h3>Grand Total: ₹<span id="grand-total">0</span></h3>
+                <button onclick="printInvoice()">Print Invoice</button>
+            </div>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
