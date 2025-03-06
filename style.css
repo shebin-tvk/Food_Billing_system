@@ -51,6 +51,21 @@ body {
     background-color: #218838;
 }
 
+#searchBar:focus {
+    border-color: rgb(70, 69, 69); /* Highlight border on focus */
+    box-shadow: 0 0 5px rgba(73, 64, 59, 0.5);
+}
+
+.cart-container {
+    display: none;
+    flex: 1;
+    min-width: 300px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .cart-container {
     display: none;
     flex: 1;
