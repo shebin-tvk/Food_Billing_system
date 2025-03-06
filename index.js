@@ -19,9 +19,17 @@ function updateCart() {
     let totalElement = document.getElementById("total");
     let gstElement = document.getElementById("gst");
     let grandTotalElement = document.getElementById("grand-total");
+    let cartContainer = document.querySelector(".cart-container"); 
 
     cartTable.innerHTML = "";
     total = 0;
+
+    if (cart.length === 0) {
+        cartContainer.style.display = "none"; 
+        return;
+    } else {
+        cartContainer.style.display = "block"; 
+    }
 
     cart.forEach((item, index) => {
         let row = document.createElement("tr");
@@ -88,3 +96,19 @@ function printInvoice() {
     newWindow.document.close();
     newWindow.print();
 }
+
+
+function searchMenu() {
+    let input = document.getElementById("searchBar").value.toLowerCase();
+    let items = document.querySelectorAll(".menu .item");
+
+    items.forEach(item => {
+        let itemName = item.getAttribute("data-name").toLowerCase();
+        if (itemName.includes(input)) {
+            item.style.display = "flex";  
+        } else {
+            item.style.display = "none"; 
+        }
+    });
+}
+
